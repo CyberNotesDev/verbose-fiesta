@@ -2,10 +2,15 @@
 using namespace std;
 
 int main () {
- unsigned int cola = 4;
- unsigned int cherryCola = 4;
- unsigned int sprite = 4;
- unsigned int dietCola = 4;
+ unsigned int popsBought;
+ unsigned int cola = 4, cherryCola = 4, sprite = 4, dietCola = 4;
   
  cout << "We have " << cola << " colas' << endl;
+  
+ cout << "How many pops would you like? ";
+ cin >> popsBought;
+ 
+ unsigned int totalPopsBought = cola - popsBought;
+ cola = cola - popsBought;
+ 
 }
