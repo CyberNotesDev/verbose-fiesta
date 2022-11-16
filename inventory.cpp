@@ -1,34 +1,39 @@
 #include <iostream>
 #include <string>
-
+// So I can set decimal precision
+#include <iomanip>
 using namespace std;
 
-void order(string pizza) {
- cout << "You're ordering a " 
-}
-
-int main () { 
+void myOrder() {
+ // Sets up float precision  
+ cout << fixed;
+ cout << setprecision(2);
  // Assign variables for the amount we have of that food/drink 
  unsigned short int twoLiterOfCola = 8, twoLiterOfCherryCola = 4, twoLiterOfSprite = 4, twoLiterOfDietCola = 4;
  unsigned short int twentyOzOfCola = 16, twentyOzOfCherryCola = 4, twentyOzOfLiterOfSprite = 4, twentyOzOfLiterOfDietCola = 8;
- unsigned short int tenInchDeep = 20, fourteenInchDeep =, sixteenInchDeep;
+ unsigned short int tenInchDeep = 20, fourteenInchDeep, sixteenInchDeep;
  // Price amount of deep dish pans
- unsigned double priceOfTenInchDeep = 5.00, priceOfFourteenInchDeep, priceOfSixteenInchDeep;
+ float priceOfTenInchDeep = 5.00, priceOfFourteenInchDeep, priceOfSixteenInchDeep;
  // Actual price of food/drinks before tax
- unsigned short double netPrice;
+ float netPrice;
  // Tax amount in Michigan
- unsigned short double salesTax = 1.06;
+ float salesTax = 1.06;
  // Total Price the customer has to pay 
- unsigned short double totalPrice = netPrice * salesTax;
+ float totalPrice = netPrice * salesTax;
  // Stores order 
  string order;
+ 
  cout << "What would you like to order today? ";
- cin >> order;
+ getline(cin, order);
  
  if (order == "Deep Dish Small") {
   netPrice = priceOfTenInchDeep;
   // Total Price the customer has to pay 
-  unsigned short double totalPrice = netPrice * salesTax;
+  totalPrice = netPrice * salesTax;
   cout << "You will now owe " << totalPrice;
  }
+}
+
+int main () {
+ myOrder();
 }
