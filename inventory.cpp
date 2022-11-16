@@ -1,25 +1,18 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
+
+
 int main () {
- unsigned int popsBought;
- unsigned int cola = 4, cherryCola = 4, sprite = 4, dietCola = 4;
-  
- string customersRequest;
- string keyWordPop = "pop";
- cout << "Welcome to Chicago Style Pizza, How may we help you today! << endl;
-  
+ // Tax amount in Michigan
+ unsigned short double tax = 1.06;
+ // Assign variables for the amount we have of that food/drink 
+ unsigned int twoLiterOfCola = 8, twoLiterOfCherryCola = 4, twoLiterOfSprite = 4, twoLiterOfDietCola = 4;
+ unsigned int twentyOzOfCola = 16, twentyOzOfCherryCola = 4, twentyOzOfLiterOfSprite = 4, twentyOzOfLiterOfDietCola = 8;
+ unsigned int tenInchDeep, fourteenInchDeep, sixteenInchDeep;
  
- getline(cin, customersRequest);
- string findKeyWordPop = customersRequest.find(keyWordPop);
- if (findKeyWordPop != npos) {
-  cout << "Found keyword pop" << endl;
- }
-  
- cout << "How many pops would you like? ";
- cin >> popsBought;
- 
- unsigned int totalPopsBought = cola - popsBought;
- cola = cola - popsBought;
+ unsigned double priceOfTenInchDeep, priceOfFourteenInchDeep, priceOfSixteenInchDeep;
+ unsigned double salesPrice = price * tax;
 }
