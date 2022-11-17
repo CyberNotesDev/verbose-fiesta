@@ -7,5 +7,7 @@ using namespace std;
 #include <inventory.h>
 
 int main () {
+ welcome();
  myOrder();
+ return 0;
 }
