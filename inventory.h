@@ -13,7 +13,9 @@ void calculateTotal() {
     netPrice = priceOfTenInchDeep;
     // Total Price the customer has to pay
     float totalPrice = netPrice * salesTax;
-    std::cout << std::setw(15) << std::setfill('*') << "YOUR TOTAL TODAY IS $" << totalPrice  << std::endl;
+    std::cout << std::setw(15) << std::setfill('*') << "***YOUR TOTAL TODAY IS $" << totalPrice << "***" << std::endl << std::endl << "THANK YOU! HAVE A GOOD DAY :)" << std::endl;
+
+    std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 void myOrder() {
@@ -22,6 +24,7 @@ void myOrder() {
 
     std::string order; // Stores order
     bool isDoneOrdering = false;
+    
     while (!isDoneOrdering) {
         std::cout << "What would you like to order today (Deep Dish Small, Deep Dish Large, Deep Dish Family)? ";
         getline(std::cin, order);

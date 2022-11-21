@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <thread> // Uses sleep_for
-#include <chrono> // uses seconds
+#include <chrono> // uses seconds()
 #include <iomanip> // So I can set decimal precision
 
 #include "inventory.h"
@@ -11,6 +11,8 @@ int main() {
     std::this_thread::sleep_for(std::chrono::seconds(1)); // Sleeps for 1 1/2 seconds
     
     myOrder();
+
+    std::cout << std::endl << "=======================================================================================" << std::endl << std::endl;
 
     return 0;
 }
