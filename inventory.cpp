@@ -6,8 +6,8 @@
 #include "inventory.h"
 
 int main() {
-    std::cout << "Welcome to Chicago Style Pizza!\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    std::cout << std::setw(60) <<  std::setfill"()Welcome to Chicago Style Pizza!\n\n";
+    std::this_thread::sleep_for(std::chrono::seconds(1) + std::chrono::milliseconds(500)); // Sleeps for 1 1/2 seconds
     
     myOrder();
 
