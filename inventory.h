@@ -13,10 +13,7 @@ void calculateTotal() {
     netPrice = priceOfTenInchDeep;
     // Total Price the customer has to pay
     float totalPrice = netPrice * salesTax;
-    std::cout << std::setw(15) << std::setfill('*') << "YOU OWE " << totalPrice  << std::endl;
-
-    tenInchDeep--;
-    std::cout << tenInchDeep << std::endl;
+    std::cout << std::setw(15) << std::setfill('*') << "YOUR TOTAL TODAY IS $" << totalPrice  << std::endl;
 }
 
 void myOrder() {
@@ -42,7 +39,7 @@ void myOrder() {
             calculateTotal();
         }
         else {
-            std::cout << "Sorry, what did you say?\n" << std::endl;
+            std::cout << "Sorry, could you repeat that again?\n" << std::endl;
         }
     }
 }
