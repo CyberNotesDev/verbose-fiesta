@@ -1,5 +1,4 @@
-void calculateTotal()
-{
+void calculateTotal() {
     // Assign variables for the amount we have of that food/drink
     unsigned short int twoLiterOfCola = 8, twoLiterOfCherryCola = 4, twoLiterOfSprite = 4, twoLiterOfDietCola = 4;
     unsigned short int twentyOzOfCola = 16, twentyOzOfCherryCola = 4, twentyOzOfLiterOfSprite = 4, twentyOzOfLiterOfDietCola = 8;
@@ -14,38 +13,35 @@ void calculateTotal()
     netPrice = priceOfTenInchDeep;
     // Total Price the customer has to pay
     float totalPrice = netPrice * salesTax;
-    std::string finalOutput = "You will now owe " + std::to_string(totalPrice); 
-    std::cout << std::tranform(finalOutput.begin(), finalOutput.end(), finalOutput.begin(), ::toupper) << std::endl;
+    std::cout << std::setw(15) << std::setfill('*') << "YOU OWE " << totalPrice  << std::endl;
+
+    tenInchDeep--;
+    std::cout << tenInchDeep << std::endl;
 }
 
-void myOrder()
-{
+void myOrder() {
     std::cout << std::fixed; // Sets up float precision
     std::cout << std::setprecision(2);
+
     std::string order; // Stores order
     bool isDoneOrdering = false;
-    while (!isDoneOrdering) 
-    {
+    while (!isDoneOrdering) {
         std::cout << "What would you like to order today (Deep Dish Small, Deep Dish Large, Deep Dish Family)? ";
         getline(std::cin, order);
 
-        if (order == "Deep Dish Small")
-        {
+        if (order == "Deep Dish Small") {
             isDoneOrdering = true;
             calculateTotal();
         }
-        else if (order == "Deep Dish Large")
-        {
+        else if (order == "Deep Dish Large") {
             isDoneOrdering = true;
             calculateTotal();
         }
-        else if (order == "Deep Dish Family")
-        {
+        else if (order == "Deep Dish Family") {
             isDoneOrdering = true;
             calculateTotal();
         }
-        else
-        {
+        else {
             std::cout << "Sorry, what did you say?\n" << std::endl;
         }
     }
