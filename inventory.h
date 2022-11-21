@@ -14,7 +14,8 @@ void calculateTotal()
     netPrice = priceOfTenInchDeep;
     // Total Price the customer has to pay
     float totalPrice = netPrice * salesTax;
-    std::cout << "You will now owe " << totalPrice;
+    std::string finalOutput = "You will now owe " + std::to_string(totalPrice); 
+    std::cout << std::tranform(finalOutput.begin(), finalOutput.end(), finalOutput.begin(), ::toupper) << std::endl;
 }
 
 void myOrder()
